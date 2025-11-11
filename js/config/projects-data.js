@@ -9,7 +9,7 @@ const projects = [
 
 const filterOptions = ["All", "Web Design", "Branding", "UI/UX Design", "Development", "Photography", "Motion Graphics"];
 
-const PEXELS_API_KEY = 'J0g5urDSko7IAE9f7FQqFY07J7o57gfMCu8WmErEJC5mnmqvSFxkhc9c';
+const PEXELS_API_KEY = 'api_key';
 
 // Mapeamento de temas para queries de pesquisa na API
 const themeQueries = {
