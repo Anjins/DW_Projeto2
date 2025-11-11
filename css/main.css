@@ -1,6 +1,7 @@
 @import url('variables.css');
 @import url('reset.css');
 @import url('components/buttons.css');
+@import url('components/loading.css');
 @import url('components/navigation.css');
 @import url('components/filters.css');
 @import url('components/footer.css');

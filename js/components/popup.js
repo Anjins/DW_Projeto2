@@ -54,3 +54,4 @@ class Popup {
   }
   
   window.PopupManager = new Popup();
+  

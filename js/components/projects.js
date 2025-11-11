@@ -147,3 +147,4 @@ class Projects {
   }
   
   window.ProjectsManager = new Projects();
+  
