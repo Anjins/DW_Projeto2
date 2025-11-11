@@ -1,0 +1,43 @@
+* {
+    cursor: none !important;
+  }
+  
+  .custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    pointer-events: none;
+    z-index: var(--z-cursor);
+    background-image: url('../../assets/icons/cursor-clicked.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform-origin: center;
+    transition: transform var(--transition-fast);
+  }
+  
+  .custom-cursor.clicked {
+    background-image: url('../../assets/icons/cursor-pointer.svg');
+    transform: translate3d(var(--pos-x, 0), var(--pos-y, 0), 0) scale(0.9) rotate(var(--tilt-angle, 0deg));
+  }
+  
+  .custom-cursor.dragging {
+    transform: translate3d(var(--pos-x, 0), var(--pos-y, 0), 0) rotate(var(--tilt-angle, 0deg));
+  }
+  
+  .custom-cursor:not(.dragging):not(.clicked) {
+    transform: translate3d(var(--pos-x, 0), var(--pos-y, 0), 0) rotate(var(--tilt-angle, 0deg));
+  }
+  
+  /* Esconder cursor em mobile */
+  @media (hover: none) and (pointer: coarse) {
+    .custom-cursor {
+      display: none !important;
+    }
+    
+    * {
+      cursor: auto !important;
+    }
+  }

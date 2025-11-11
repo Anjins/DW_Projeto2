@@ -1,0 +1,40 @@
+:root {
+  /* Cores */
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-gray-light: #f3f4f6;
+  --color-gray-medium: #e5e5e5;
+  --color-gray-dark: #333333;
+  --color-background: #0a0a0a;
+  
+  /* Tipografia */
+  --font-primary: 'Inter', sans-serif;
+  --font-accent: 'Dancing Script', cursive;
+  
+  /* Transições */
+  --transition-fast: 0.2s ease;
+  --transition-standard: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  
+  /* Bordas */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+  
+  /* Espaçamentos */
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 80px;
+  
+  /* Z-index */
+  --z-cursor: 9999;
+  --z-nav: 1000;
+  --z-popup: 100;
+  --z-overlay: 99;
+}

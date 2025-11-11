@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects - Pedro Anjinho</title>
+  
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <!-- Hero -->
+  <section class="hero-section hero-projects" id="heroSection">
+    <div class="hero-content">
+    </div>
+  </section>
+
+  <!-- Filtros -->
+  <div class="filters-container">
+    <div class="filters-content">
+      <div class="filters-grid" id="filtersGrid"></div>
+    </div>
+  </div>
+
+  <!-- Projetos -->
+  <div class="main-wrapper">
+    <div class="projects-container">
+      <div class="projects-grid" id="projectsGrid"></div>
+    </div>
+  </div>
+
+  <!-- Popup -->
+  <div class="details-popup" id="detailsPopup">
+    <div class="popup-header">
+      <h2 class="popup-title" id="popupTitle">Project Title</h2>
+      <button class="btn-close" id="popupClose">×</button>
+    </div>
+    <div class="popup-content">
+      <div class="popup-description" id="popupDescription"></div>
+      <div class="popup-gallery">
+        <div class="gallery-grid" id="popupGallery"></div>
+      </div>
+    </div>
+  </div>
+  <div class="overlay" id="popupOverlay"></div>
+
+  <!-- Nasv Bar -->
+  <div class="bottom-nav-wrapper">
+    <div class="bottom-nav" id="bottomNav">
+      <button class="btn-nav-toggle" id="navToggle" aria-label="Abrir navegação">
+        <img src="assets/icons/logo-small.svg" alt="Logo" class="nav-logo">
+      </button>
+      <nav class="nav-menu" id="navMenu">
+        <img src="assets/icons/logo-small.svg" alt="Logo" class="nav-logo-expanded">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+      </nav>
+    </div>
+  </div>
+
+    <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3 class="footer-title">Let's Connect</h3>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+              <img src="assets/icons/instagram.svg" alt="Instagram">
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+              <img src="assets/icons/github.svg" alt="GitHub">
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+              <img src="assets/icons/linkedin.svg" alt="LinkedIn">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config/projects-data.js"></script>
+  <script src="js/components/filters.js"></script>
+  <script src="js/components/projects.js"></script>
+  <script src="js/components/navigation.js"></script>
+  <script src="js/components/footer.js"></script>
+  <script src="js/components/popup.js"></script>
+  <script src="js/components/custom-cursor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

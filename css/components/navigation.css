@@ -1,0 +1,116 @@
+.bottom-nav-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  z-index: var(--z-nav);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity var(--transition-standard), transform var(--transition-standard);
+}
+
+.bottom-nav-wrapper.hidden {
+  opacity: 0;
+  transform: translateY(100%);
+  pointer-events: none;
+}
+
+.bottom-nav {
+  position: relative;
+  pointer-events: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: var(--space-xl);
+}
+
+.btn-nav-toggle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-black);
+  color: var(--color-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all var(--transition-slow);
+  z-index: 2;
+}
+
+.btn-nav-toggle:hover {
+  transform: scale(1.05);
+}
+
+.nav-logo {
+  width: 32px;
+  height: 36px;
+  transition: transform var(--transition-slow);
+}
+
+.bottom-nav.expanded .btn-nav-toggle .nav-logo {
+  transform: rotate(180deg);
+}
+
+.nav-menu {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+  background: var(--color-black);
+  border-radius: var(--radius-full);
+  padding: var(--space-lg) var(--space-3xl);
+  opacity: 0;
+  pointer-events: none;
+  transition: all var(--transition-slow);
+  white-space: nowrap;
+}
+
+.nav-logo-expanded {
+  width: 32px;
+  height: 36px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all var(--transition-slow);
+}
+
+.nav-link {
+  color: var(--color-white);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all var(--transition-standard);
+}
+
+.nav-link:hover {
+  opacity: 0.7;
+}
+
+.bottom-nav.expanded .btn-nav-toggle {
+  opacity: 0;
+  transform: scale(0.8);
+  pointer-events: none;
+}
+
+.bottom-nav.expanded .nav-menu {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+  pointer-events: auto;
+}
+
+.bottom-nav.expanded .nav-logo-expanded {
+  opacity: 1;
+  transform: translateY(0) rotate(180deg);
+}
+
+.bottom-nav.expanded .nav-link {
+  opacity: 1;
+  transform: translateY(0);
+}

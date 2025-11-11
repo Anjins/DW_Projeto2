@@ -1,0 +1,228 @@
+@media (max-width: 768px) {
+    .details-popup {
+      height: 90vh;
+      border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    }
+  
+    .popup-header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: var(--space-lg) var(--space-lg) var(--space-md);
+      position: relative;
+      min-height: 80px;
+    }
+  
+    .popup-title {
+      font-size: 2.5rem;
+      margin-right: 0;
+      margin-bottom: var(--space-sm);
+      order: 2;
+      width: 100%;
+    }
+  
+    .popup-close {
+      position: absolute;
+      top: var(--space-lg);
+      right: var(--space-lg);
+      order: 1;
+      align-self: flex-end;
+      margin-bottom: var(--space-md);
+      width: 35px;
+      height: 35px;
+      font-size: 2.5rem;
+    }
+  
+    .popup-content {
+      flex-direction: column;
+      overflow: auto;
+    }
+  
+    .popup-description {
+      width: 100%;
+      padding: var(--space-lg);
+      order: 1;
+      overflow-y: visible;
+    }
+  
+    .popup-gallery {
+      width: 100%;
+      order: 2;
+      overflow-y: visible;
+      padding: 0 var(--space-lg) var(--space-lg);
+    }
+  
+    .gallery-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+    }
+  
+    .gallery-item {
+      aspect-ratio: 16/9;
+    }
+
+    .popup-description p:nth-child(1) {
+      animation-delay: 0.3s;
+    }
+  
+    .popup-description p:nth-child(2) {
+      animation-delay: 0.4s;
+    }
+  
+    .popup-description p:nth-child(3) {
+      animation-delay: 0.5s;
+    }
+  
+    .gallery-item:nth-child(1) {
+      animation-delay: 0.6s;
+    }
+  
+    .gallery-item:nth-child(2) {
+      animation-delay: 0.7s;
+    }
+  
+    .gallery-item:nth-child(3) {
+      animation-delay: 0.8s;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .details-popup {
+      height: 95vh;
+    }
+  
+    .popup-header {
+      padding: var(--space-md) var(--space-md) var(--space-sm);
+    }
+  
+    .popup-title {
+      font-size: 2rem;
+    }
+  
+    .popup-close {
+      top: var(--space-md);
+      right: var(--space-md);
+      width: 30px;
+      height: 30px;
+      font-size: 2rem;
+    }
+  
+    .popup-description {
+      padding: var(--space-md);
+    }
+  
+    .popup-gallery {
+      padding: 0 var(--space-md) var(--space-md);
+    }
+  
+    .gallery-grid {
+      gap: var(--space-sm);
+    }
+  
+    .project-details-btn {
+      padding: var(--space-xs) var(--space-sm);
+      font-size: 12px;
+      bottom: var(--space-sm);
+      right: var(--space-sm);
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .popup-title {
+      font-size: 4rem;
+    }
+  
+    .popup-gallery {
+      width: 45%;
+    }
+  
+    .popup-description {
+      width: 55%;
+    }
+  }
+
+@media (max-width: 1024px) {
+  .about-content {
+    gap: var(--space-2xl);
+  }
+  
+  .about-image {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: var(--space-3xl) var(--space-lg);
+    min-height: auto;
+  }
+  
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+  
+  .about-info {
+    gap: var(--space-lg);
+  }
+  
+  .about-image {
+    height: 350px;
+  }
+  
+  .about-text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: var(--space-2xl) var(--space-md);
+  }
+  
+  .about-image {
+    height: 300px;
+  }
+  
+  .about-text {
+    font-size: 15px;
+  }
+  
+  .view-work {
+    margin-top: var(--space-md);
+  }
+}
+
+@media (max-width: 1024px) {
+  .projects-grid {
+    gap: var(--space-2xl);
+    grid-auto-rows: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-container {
+    padding: var(--space-xl) var(--space-lg);
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+    grid-auto-rows: 250px;
+  }
+  
+  .project-card.expanded {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-container {
+    padding: var(--space-lg) var(--space-md);
+  }
+  
+  .projects-grid {
+    gap: var(--space-xl);
+    grid-auto-rows: 200px;
+  }
+}

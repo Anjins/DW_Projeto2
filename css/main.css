@@ -1,0 +1,23 @@
+@import url('variables.css');
+@import url('reset.css');
+@import url('components/buttons.css');
+@import url('components/navigation.css');
+@import url('components/filters.css');
+@import url('components/footer.css');
+@import url('components/cursor.css');
+@import url('components/cards.css');
+@import url('components/popup.css');
+@import url('layouts/hero.css');
+@import url('layouts/sections.css');
+@import url('layouts/grid.css');
+@import url('responsive.css');
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.main-wrapper {
+  padding-bottom: var(--space-4xl);
+}

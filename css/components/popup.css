@@ -1,0 +1,231 @@
+.details-popup {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 85vh;
+    background: var(--color-white);
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    z-index: var(--z-popup);
+    transform: translateY(100%);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .details-popup.open {
+    transform: translateY(0);
+  }
+  
+  .popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: var(--space-lg) var(--space-xl);
+    position: relative;
+  }
+  
+  .popup-title {
+    font-size: 5rem;
+    font-weight: 600;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUpFadeIn 0.6s ease 0.2s forwards;
+    flex: 1;
+    margin-right: var(--space-lg);
+  }
+  
+  .popup-close {
+    background: none;
+    border: none;
+    color: var(--color-black);
+    font-size: 3rem;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUpFadeIn 0.6s ease 0.3s forwards;
+    position: relative;
+    z-index: 101;
+  }
+  
+  .popup-close:hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  
+  .popup-content {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .popup-description {
+    flex: 1;
+    padding: var(--space-xl);
+    overflow-y: auto;
+  }
+  
+  .popup-description p {
+    line-height: 1.6;
+    margin-bottom: var(--space-md);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUpFadeIn 0.6s ease forwards;
+  }
+  
+  .popup-gallery {
+    width: 40%;
+    overflow-y: auto;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  
+  .gallery-item {
+    width: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUpFadeIn 0.6s ease forwards;
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-item:hover img {
+    transform: scale(1.05);
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: var(--z-overlay);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Animation Keyframes */
+  @keyframes slideUpFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* More Details Button */
+  .project-details-btn {
+    position: absolute;
+    bottom: var(--space-md);
+    right: var(--space-md);
+    background: rgba(0, 0, 0, 0.9);
+    color: var(--color-white);
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: var(--radius-sm);
+    padding: var(--space-sm) var(--space-md);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 5;
+  }
+  
+  .project-card.expanded .project-details-btn {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .project-details-btn:hover {
+    background: var(--color-white);
+    color: var(--color-black);
+    transform: translateY(-2px);
+  }
+  
+  /* Reset animations when popup closes */
+  .details-popup:not(.open) .popup-title,
+  .details-popup:not(.open) .popup-close,
+  .details-popup:not(.open) .popup-description p,
+  .details-popup:not(.open) .gallery-item {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: none;
+  }
+  
+  /* Stagger animation for multiple paragraphs */
+  .popup-description p:nth-child(1) {
+    animation-delay: 0.4s;
+  }
+  
+  .popup-description p:nth-child(2) {
+    animation-delay: 0.5s;
+  }
+  
+  .popup-description p:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  
+  .popup-description p:nth-child(4) {
+    animation-delay: 0.7s;
+  }
+  
+  .popup-description p:nth-child(5) {
+    animation-delay: 0.8s;
+  }
+  
+  /* Stagger animation for gallery items */
+  .gallery-item:nth-child(1) {
+    animation-delay: 0.4s;
+  }
+  
+  .gallery-item:nth-child(2) {
+    animation-delay: 0.5s;
+  }
+  
+  .gallery-item:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  
+  .gallery-item:nth-child(4) {
+    animation-delay: 0.7s;
+  }
+  
+  .gallery-item:nth-child(5) {
+    animation-delay: 0.8s;
+  }
